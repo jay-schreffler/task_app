@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#app-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 1fr;
+    /* border: 2px solid red; */
+    height: 100vh;
+    width:90vw;
+    margin: auto;
+}
+
+/* overview container */
+
+/* #overview-container {
+    border: 5px solid blue;
+} */
+
+#overview-container h2{
+    color: #F9AB55;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    text-decoration: underline;
+}
+/* task priority status container */
+
+.task-priority-status-view {
+    /* border: 5px solid purple; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+    width: 80%;
+    height:30%;
+    margin: auto;
+}
+
+.task-priority-status-view p:nth-child(1) {
+    color: #F58A07;
+}
+
+.task-priority-status-view p:nth-child(2) {
+    color: #F9AB55;
+}
+
+.task-priority-status-view p:nth-child(3) {
+    color: #084887;
+}
+
+.priority-label, .priority-task-number {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* task view container */
+
+#taskview-container {
+    /* border: 5px solid orange; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: scroll;
+    height: 90%;
+    margin: auto 0;
+}
+
+/* task cards */
+
+.task-card-container {
+    height: 25%;
+    width: 40%;
+    background-color: #909CC2;
+    border-radius: 5px;
+}
+
+#card-title-bar {
+    font-size: .9rem;
+    color: white;
+    /* border: 2px solid pink; */
+}
+
+.card-priority-status {
+    display: inline-block;
+    width: 15%;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-align: center;
+    margin: 4px;
+    background-color: #F58A07;
+}
+
+
+.card-title {
+    display: inline-block;
+    text-align: center;
+    width: 75%;
+    padding: 0 5px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    /* border: 2px solid red; */
+}
+
+.card-body {
+    width: 90%;
+    height: 60%;
+    border: 2px solid white;
+    margin: auto;
+    margin-bottom: 10px;
+    color: #084887;
+    font-size: 1.1rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 5px;
+}
