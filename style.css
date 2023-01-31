@@ -164,3 +164,42 @@
     color: white;
     background-color: #909CC2;
 }
+
+/* add task modal */
+
+#task-modal {
+    height: 60vh;
+    width: 70vh;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px -3px 2px white;
+}
+
+#task-modal::backdrop {
+    background-color: #909CC2;
+}
+
+#task-modal-close-btn {
+    font-size: 1.4rem;
+    width: 25px;
+    margin: 5px;
+    position: absolute;
+    right: 0;
+    color: #084887;
+    border: none;
+    background-color: white;
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid green;
+    margin: auto;
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+}

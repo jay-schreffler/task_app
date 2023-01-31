@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <div id="app-container">
@@ -29,7 +30,7 @@
             <div class="add-new-task-container">
                 <h3>Add New Task</h3>
                 <div id="new-task-btn">
-                    <h3>+</h3>
+                    <h3 id='add-task-btn'>+</h3>
                 </div>
             </div>
         </div>
@@ -66,7 +67,20 @@
             <div class="task-card-container"></div>
         </div>
         <dialog id="task-modal">
-
+            <button id="task-modal-close-btn">X</button>
+            <form action="https://x8ki-letl-twmt.n7.xano.io/api:kqY7L_VS/task_app_db" method='dialog' id='task-form'>
+                <label for="name">Task Name:</label>
+                <input type="text" id='name' name='name'>
+                <label for="priority" name='priority'>Priority:</label>
+                <select name="priority" id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" cols="50" rows="10"></textarea>
+                <input type="submit" value='Add' id='return-value'>
+            </form>
         </dialog>
     </div>
 </body>
