@@ -28,10 +28,22 @@ class NewTask {
 }
 
 // instead of pushing to array these results need push to db.
+// returnValue.addEventListener('click', () => {
+//     activeTask.push(new NewTask(newTaskName.value,newTaskPriority.value,newTaskDescripton.value))
+//     console.log(activeTask)
+//     newTaskName.value = '';
+//     newTaskPriority.value = '';
+//     newTaskDescripton.value = '';
+// })
+
 returnValue.addEventListener('click', () => {
-    activeTask.push(new NewTask(newTaskName.value,newTaskPriority.value,newTaskDescripton.value))
-    console.log(activeTask)
-    newTaskName.value = '';
-    newTaskPriority.value = '';
-    newTaskDescripton.value = '';
+    const data = new NewTask(newTaskName.value,newTaskPriority.value,newTaskDescripton.value)
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:kqY7L_VS/task_app_db', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    
 })
