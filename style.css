@@ -78,13 +78,16 @@
 .task-card-container {
     height: 25%;
     width: 40%;
-    background-color: #909CC2;
+    border: 5px solid #909CC2;
+    /* background-color: #909CC2; */
     border-radius: 5px;
 }
 
 #card-title-bar {
     font-size: .9rem;
     color: white;
+    width: 80%;
+    margin: 0 auto;
     /* border: 2px solid pink; */
 }
 
@@ -108,6 +111,7 @@
     margin-top: 4px;
     margin-bottom: 10px;
     text-decoration: underline;
+    color: #084887;
     /* border: 2px solid red; */
 }
 
@@ -123,4 +127,19 @@
     overflow-x: hidden;
     background-color: white;
     border-radius: 5px;
+}
+
+.card-btn-container {
+   display: flex;
+   justify-content: flex-end;
+   gap: 5px;
+   margin-right: 20px; 
+}
+
+.card-btn-container button {
+    padding: 2px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background-color: #909CC2;
 }
