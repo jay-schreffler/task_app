@@ -7,8 +7,6 @@ const newTaskName = document.querySelector('#name');
 const newTaskPriority = document.querySelector('#priority');
 const newTaskDescripton = document.querySelector('#description');
 
-const activeTask = [];
-
 // open task modal
 addTaskBtn.addEventListener('click', () => {
     addTaskModal.showModal();
@@ -26,15 +24,6 @@ class NewTask {
         this.description = description;
     }
 }
-
-// instead of pushing to array these results need push to db.
-// returnValue.addEventListener('click', () => {
-//     activeTask.push(new NewTask(newTaskName.value,newTaskPriority.value,newTaskDescripton.value))
-//     console.log(activeTask)
-//     newTaskName.value = '';
-//     newTaskPriority.value = '';
-//     newTaskDescripton.value = '';
-// })
 
 returnValue.addEventListener('click', () => {
     const data = new NewTask(newTaskName.value,newTaskPriority.value,newTaskDescripton.value)
